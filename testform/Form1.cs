@@ -106,7 +106,42 @@ namespace testform
         private void button4_Click(object sender, EventArgs e)
         {
             string studentname = txbxStudentName.Text;
-            Student stu = new Student(studentname);
+            Student anthony = new Student(studentname);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string phoneNo = txbxNumber.Text;
+            if (phoneNo.Length == 10)
+            {
+                if (phoneNo.Substring(0,2) == "02" || phoneNo.Substring(0,2) == "04" || phoneNo.Substring(0, 2) == "03" || phoneNo.Substring(0, 2) == "07" || phoneNo.Substring(0, 2) == "08")
+                {
+                    lblResult.Text = "Valid";
+                }
+                else
+                {
+                    lblResult.Text = "Not Valid";
+                }
+            }
+            else if (phoneNo.Length == 11)
+            {
+                if (phoneNo.Substring(0, 2) == "61")
+                {
+                    lblResult.Text = "Valid";
+                }
+                else
+                {
+                    lblResult.Text = "Not Valid";
+                }
+            }
+            else if (phoneNo.Length == 8)
+            {
+                lblResult.Text = "Valid";
+            }
+            else
+            {
+                lblResult.Text = "Not Valid";
+            }
         }
     }
 }

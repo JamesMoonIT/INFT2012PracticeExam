@@ -17,7 +17,7 @@ namespace testform
             sMyCourse = "";
             sMyName = studentName;
             Random rand = new Random();
-            iMyStudnum = Convert.ToInt32(Convert.ToString("346" + rand.Next(0, 9999).ToString("D4")));
+            iMyStudnum = Convert.ToInt32("346" + rand.Next(0, 9999).ToString("D4"));
         }
     }
 

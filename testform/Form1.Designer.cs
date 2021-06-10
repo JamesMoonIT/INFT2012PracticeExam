@@ -53,6 +53,9 @@ namespace testform
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.txbxNumber = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -60,6 +63,7 @@ namespace testform
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -233,7 +237,7 @@ namespace testform
             // lblResult
             // 
             this.lblResult.AutoSize = true;
-            this.lblResult.Location = new System.Drawing.Point(35, 138);
+            this.lblResult.Location = new System.Drawing.Point(351, 426);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(38, 15);
             this.lblResult.TabIndex = 12;
@@ -242,7 +246,7 @@ namespace testform
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Location = new System.Drawing.Point(638, 82);
+            this.groupBox3.Location = new System.Drawing.Point(511, 19);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(114, 100);
             this.groupBox3.TabIndex = 13;
@@ -252,7 +256,7 @@ namespace testform
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.button2);
-            this.groupBox4.Location = new System.Drawing.Point(629, 264);
+            this.groupBox4.Location = new System.Drawing.Point(644, 19);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(135, 100);
             this.groupBox4.TabIndex = 14;
@@ -289,7 +293,6 @@ namespace testform
             // 
             this.groupBox7.Controls.Add(this.txbxStudentName);
             this.groupBox7.Controls.Add(this.button4);
-            this.groupBox7.Controls.Add(this.lblResult);
             this.groupBox7.Location = new System.Drawing.Point(292, 214);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(200, 195);
@@ -297,12 +300,42 @@ namespace testform
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Question 16";
             // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.txbxNumber);
+            this.groupBox8.Controls.Add(this.button5);
+            this.groupBox8.Location = new System.Drawing.Point(532, 149);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(200, 100);
+            this.groupBox8.TabIndex = 18;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Question 15";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(6, 65);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(100, 23);
+            this.button5.TabIndex = 0;
+            this.button5.Text = "Validate";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // txbxNumber
+            // 
+            this.txbxNumber.Location = new System.Drawing.Point(6, 27);
+            this.txbxNumber.Name = "txbxNumber";
+            this.txbxNumber.Size = new System.Drawing.Size(100, 23);
+            this.txbxNumber.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox7);
+            this.Controls.Add(this.lblResult);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -321,7 +354,10 @@ namespace testform
             this.groupBox6.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -351,6 +387,9 @@ namespace testform
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.TextBox txbxNumber;
+        private System.Windows.Forms.Button button5;
     }
 }
 
