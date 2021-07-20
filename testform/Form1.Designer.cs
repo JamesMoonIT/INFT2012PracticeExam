@@ -54,8 +54,21 @@ namespace testform
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
             this.txbxNumber = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.cbxDifficult = new System.Windows.Forms.CheckBox();
+            this.btnCalculate = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txbxResult = new System.Windows.Forms.TextBox();
+            this.txbxBedrooms = new System.Windows.Forms.TextBox();
+            this.txbxBasePrice = new System.Windows.Forms.TextBox();
+            this.tbxMessage = new System.Windows.Forms.TextBox();
+            this.btnPlay = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -64,6 +77,8 @@ namespace testform
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -311,6 +326,13 @@ namespace testform
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Question 15";
             // 
+            // txbxNumber
+            // 
+            this.txbxNumber.Location = new System.Drawing.Point(6, 27);
+            this.txbxNumber.Name = "txbxNumber";
+            this.txbxNumber.Size = new System.Drawing.Size(100, 23);
+            this.txbxNumber.TabIndex = 1;
+            // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(6, 65);
@@ -321,18 +343,137 @@ namespace testform
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // txbxNumber
+            // pictureBox1
             // 
-            this.txbxNumber.Location = new System.Drawing.Point(6, 27);
-            this.txbxNumber.Name = "txbxNumber";
-            this.txbxNumber.Size = new System.Drawing.Size(100, 23);
-            this.txbxNumber.TabIndex = 1;
+            this.pictureBox1.Location = new System.Drawing.Point(559, 263);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(624, 507);
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(767, 226);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 20;
+            this.button6.Text = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.cbxDifficult);
+            this.groupBox9.Controls.Add(this.btnCalculate);
+            this.groupBox9.Controls.Add(this.label4);
+            this.groupBox9.Controls.Add(this.label3);
+            this.groupBox9.Controls.Add(this.label2);
+            this.groupBox9.Controls.Add(this.txbxResult);
+            this.groupBox9.Controls.Add(this.txbxBedrooms);
+            this.groupBox9.Controls.Add(this.txbxBasePrice);
+            this.groupBox9.Location = new System.Drawing.Point(845, 19);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(304, 204);
+            this.groupBox9.TabIndex = 21;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "groupBox9";
+            // 
+            // cbxDifficult
+            // 
+            this.cbxDifficult.AutoSize = true;
+            this.cbxDifficult.Location = new System.Drawing.Point(83, 102);
+            this.cbxDifficult.Name = "cbxDifficult";
+            this.cbxDifficult.Size = new System.Drawing.Size(121, 19);
+            this.cbxDifficult.TabIndex = 7;
+            this.cbxDifficult.Text = "Difficult to Access";
+            this.cbxDifficult.UseVisualStyleBackColor = true;
+            // 
+            // btnCalculate
+            // 
+            this.btnCalculate.Location = new System.Drawing.Point(63, 132);
+            this.btnCalculate.Name = "btnCalculate";
+            this.btnCalculate.Size = new System.Drawing.Size(163, 23);
+            this.btnCalculate.TabIndex = 6;
+            this.btnCalculate.Text = "Calculate House Price";
+            this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(24, 163);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(92, 15);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "This house price";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(24, 69);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(122, 15);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Number of bedrooms";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(24, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 15);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Base house price";
+            // 
+            // txbxResult
+            // 
+            this.txbxResult.Location = new System.Drawing.Point(173, 161);
+            this.txbxResult.Name = "txbxResult";
+            this.txbxResult.Size = new System.Drawing.Size(100, 23);
+            this.txbxResult.TabIndex = 2;
+            // 
+            // txbxBedrooms
+            // 
+            this.txbxBedrooms.Location = new System.Drawing.Point(173, 65);
+            this.txbxBedrooms.Name = "txbxBedrooms";
+            this.txbxBedrooms.Size = new System.Drawing.Size(100, 23);
+            this.txbxBedrooms.TabIndex = 1;
+            // 
+            // txbxBasePrice
+            // 
+            this.txbxBasePrice.Location = new System.Drawing.Point(173, 33);
+            this.txbxBasePrice.Name = "txbxBasePrice";
+            this.txbxBasePrice.Size = new System.Drawing.Size(100, 23);
+            this.txbxBasePrice.TabIndex = 0;
+            // 
+            // tbxMessage
+            // 
+            this.tbxMessage.Location = new System.Drawing.Point(56, 458);
+            this.tbxMessage.Multiline = true;
+            this.tbxMessage.Name = "tbxMessage";
+            this.tbxMessage.Size = new System.Drawing.Size(175, 196);
+            this.tbxMessage.TabIndex = 22;
+            // 
+            // btnPlay
+            // 
+            this.btnPlay.Location = new System.Drawing.Point(56, 417);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(100, 23);
+            this.btnPlay.TabIndex = 23;
+            this.btnPlay.Text = "Roll Dice";
+            this.btnPlay.UseVisualStyleBackColor = true;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1241, 844);
+            this.Controls.Add(this.btnPlay);
+            this.Controls.Add(this.tbxMessage);
+            this.Controls.Add(this.groupBox9);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.lblResult);
@@ -356,6 +497,9 @@ namespace testform
             this.groupBox7.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -390,6 +534,19 @@ namespace testform
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.TextBox txbxNumber;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.CheckBox cbxDifficult;
+        private System.Windows.Forms.Button btnCalculate;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txbxResult;
+        private System.Windows.Forms.TextBox txbxBedrooms;
+        private System.Windows.Forms.TextBox txbxBasePrice;
+        private System.Windows.Forms.TextBox tbxMessage;
+        private System.Windows.Forms.Button btnPlay;
     }
 }
 

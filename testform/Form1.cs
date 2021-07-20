@@ -114,7 +114,7 @@ namespace testform
             string phoneNo = txbxNumber.Text;
             if (phoneNo.Length == 10)
             {
-                if (phoneNo.Substring(0,2) == "02" || phoneNo.Substring(0,2) == "04" || phoneNo.Substring(0, 2) == "03" || phoneNo.Substring(0, 2) == "07" || phoneNo.Substring(0, 2) == "08")
+                if (phoneNo.Substring(0, 2) == "02" || phoneNo.Substring(0, 2) == "04" || phoneNo.Substring(0, 2) == "03" || phoneNo.Substring(0, 2) == "07" || phoneNo.Substring(0, 2) == "08")
                 {
                     lblResult.Text = "Valid";
                 }
@@ -142,6 +142,110 @@ namespace testform
             {
                 lblResult.Text = "Not Valid";
             }
+        }
+
+        private void switchvalues()
+        {
+            int sOne = 0, sTwo = 1, sExtra;
+            sExtra = sOne;
+            sTwo = sOne;
+            sOne = sExtra;
+            MessageBox.Show("sOne =");
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+            double price = 0;
+            int basePrice = Convert.ToInt32(txbxBasePrice.Text);
+            int bedrooms = Convert.ToInt32(txbxBedrooms.Text);
+            bool difficult = Convert.ToBoolean(cbxDifficult.Checked);
+            if (basePrice < 0)
+            {
+                basePrice *= -1;
+            }
+            if (bedrooms < 0)
+            {
+                bedrooms *= -1;
+            }
+            if (bedrooms == 1)
+            {
+                bedrooms = -10000;
+            }
+            else if (bedrooms == 2)
+            {
+                bedrooms = 0;
+            }
+            else
+            {
+                bedrooms = (bedrooms - 2) * 10000;
+            }
+            price = basePrice + bedrooms;
+            if (difficult)
+            {
+                price *= 1.1;
+            }
+            txbxResult.Text = String.Format("{0:c}", price);
+        }
+
+        private void LargestCases(int Month)
+        {
+            int[,] iCases = new int[32, 13];
+            int largestDay = 0, totalCasesforMonth = 0;
+            for (int day = 1; day <= 32; day++)
+            {
+                totalCasesforMonth = iCases[day, Month];   // Number of cases in a month
+                if (iCases[day,Month] > largestDay)
+                {
+                    largestDay = day;   // The Day of the Month that had the greatest number of cases
+                }
+            }
+        }
+
+        private string RollDice()
+        {
+            Random rand = new Random();
+            int dice1 = rand.Next(1, 7);
+            int dice2 = rand.Next(1, 7);
+            int dice3 = rand.Next(1, 7);
+            int dice4 = rand.Next(1, 7);
+            int dice5 = rand.Next(1, 7);
+            int result = dice1 + dice2 + dice3 + dice4 + dice5;
+            return Convert.ToString(result) + ": " + Convert.ToString(dice1) + " " + Convert.ToString(dice2) + " " + Convert.ToString(dice3) + " " + Convert.ToString(dice4) + " " + Convert.ToString(dice5);
+        }
+
+        private void PlayGame()
+        {
+            string result = RollDice();
+            int rollsum = 0;
+            if (result.Length == 12)
+            {
+                rollsum = Convert.ToInt32(result.Substring(0, 1));
+            }
+            else
+            {
+                rollsum = Convert.ToInt32(result.Substring(0, 2));
+            }
+            if (rollsum < 10 || rollsum > 26)
+            {
+                result += " - bonus 20 points!";
+            }
+            tbxMessage.Text += result + System.Environment.NewLine;
+        }
+
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            PlayGame();
+        }
+
+        private void CreateEmployees()
+        {
+            Employee employee1 = new Employee("Simon");
+            Employee employee2 = new Employee("James", "Student", 21);
         }
     }
 }
